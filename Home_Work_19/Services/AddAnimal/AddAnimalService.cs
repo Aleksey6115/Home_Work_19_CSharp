@@ -13,6 +13,10 @@ namespace Home_Work_19.Services.AddAnimal
     internal class AddAnimalService : IAddAnimalService
     {
         private IAnimal newAnimal; // Добавленное животное
+        private List<IAnimal> animals = new List<IAnimal>()
+        {
+            new Amphibious(), new Bird(), new Mammal(), new NewTypeAnimal()
+        };
 
         public IAnimal NewAnimal { get => newAnimal; }
 
@@ -24,10 +28,11 @@ namespace Home_Work_19.Services.AddAnimal
         public bool OpenAddAnimalWindow()
         {
             AddAnimalWindow AAW = new AddAnimalWindow();
+            AAW.animalCombo.ItemsSource = animals;
 
             if (AAW.ShowDialog() == true)
             {
-                newAnimal = AnimalFactory.GetAnimal(AAW.txtAnimal.Text);
+                newAnimal = AnimalFactory.GetAnimal(AAW.animalCombo.SelectedItem.ToString());
                 return true;
             }
             return false;

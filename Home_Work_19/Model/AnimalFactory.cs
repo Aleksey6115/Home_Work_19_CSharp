@@ -18,7 +18,7 @@ namespace Home_Work_19.Model
                 case "млекопитающие": return new Mammal();
                 case "птица": return new Bird ();
                 case "земноводное": return new Amphibious ();
-                default: return new NewTypeAnimal { Type = type, Note = "О типе нет сведений" };
+                default: return new NewTypeAnimal();
             }
         }
     }

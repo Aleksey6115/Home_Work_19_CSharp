@@ -21,5 +21,10 @@ namespace Home_Work_19.Model
             this.Type = "Птица";
             this.Note = "Может летать";
         }
+
+        public override string ToString()
+        {
+            return this.Type;
+        }
     }
 }

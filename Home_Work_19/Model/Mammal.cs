@@ -21,5 +21,10 @@ namespace Home_Work_19.Model
             this.Type = "Млекопитающие";
             this.Note = "Вскормливает детёнышей молоком";
         }
+
+        public override string ToString()
+        {
+            return this.Type;
+        }
     }
 }

@@ -21,5 +21,10 @@ namespace Home_Work_19.Model
             this.Type = "Земноводное";
             this.Note = "Может плавать и выходить на сушу";
         }
+
+        public override string ToString()
+        {
+            return this.Type;
+        }
     }
 }

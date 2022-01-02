@@ -26,7 +26,7 @@ namespace Home_Work_19.Services.AddAnimal
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (this.txtAnimal.Text.Length > 0) this.DialogResult = true;
+            if (this.animalCombo.SelectedItem != null) this.DialogResult = true;
             else MessageBox.Show("Укажите вид!", "Добавление", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }

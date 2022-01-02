@@ -15,5 +15,16 @@ namespace Home_Work_19.Model
         public string Name { get; set; }
         public string Color { get; set; }
         public string Note { get; set; }
+
+        public NewTypeAnimal()
+        {
+            this.Type = "Новый вид";
+            this.Note = "О данном типе нет сведений";
+        }
+
+        public override string ToString()
+        {
+            return this.Type;
+        }
     }
 }
