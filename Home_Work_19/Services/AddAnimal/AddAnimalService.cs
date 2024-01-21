@@ -35,6 +35,7 @@ namespace Home_Work_19.Services.AddAnimal
                 newAnimal = AnimalFactory.GetAnimal(AAW.animalCombo.SelectedItem.ToString());
                 return true;
             }
+            Console.WriteLine("HFHFHFHFH");
             return false;
         }
     }
